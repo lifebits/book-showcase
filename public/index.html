@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Bookshop</title>
+
+    <!--<base href="/">-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- analytic script -->
+
+    <script defer src="./app.js"></script>
+
+</head>
+
+<body>
+
+    <section ui-view>
+
+        <span style="margin-left: 14px; line-height: 40px;">
+            На главной обычно располагается множество различной информации, а переход на витрину осуществляется на следующем шаге
+        </span>
+        <br>
+        <md-button ui-sref="showcase" md-no-ink="" class="md-primary">Перейти на книжную витрину </md-button>
+
+    </section>
+
+</body>
+</html>
