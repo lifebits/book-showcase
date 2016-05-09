@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic);
+
+html, body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pageNotFound {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: #ff8a80;
+
+  span {
+    position: relative;
+    top: 200px;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

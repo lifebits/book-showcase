@@ -1,0 +1,24 @@
+<section class="board-book">
+
+    <md-content flex="" layout-padding="">
+        <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px">
+
+            <md-grid-tile ui-sref="showcase.book({bookId: book.id})"
+                          ui-sref-active="active"
+                          ng-repeat="book in $ctrl.books" class="green">
+
+                <img ng-src="{{::$ctrl.getBookCoverURL(book.cover)}}" check-loading-img/>
+                <md-grid-tile-footer>
+                    <h3>{{::book.title.default}}</h3>
+                </md-grid-tile-footer>
+
+            </md-grid-tile>
+
+        </md-grid-list>
+    </md-content>
+
+    <section ui-view class="wrap-bookInfo">
+
+    </section>
+
+</section>

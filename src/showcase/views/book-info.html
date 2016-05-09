@@ -1,0 +1,28 @@
+<md-card>
+
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{$ctrl.book.title.default}}</span>
+        </md-card-title-text>
+    </md-card-title>
+
+    <md-divider></md-divider>
+
+    <md-card-content>
+        <md-list>
+            <md-list-item class="md-2-line" ng-repeat="(key, value) in $ctrl.book">
+                <div class="md-list-item-text" layout="column">
+                    <h3>{{ key }}</h3>
+                    <p>{{ value }}</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+
+    <span ng-if="!$ctrl.book" class="md-subhead" style="text-align: center">this book does not exist :(</span>
+
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="$ctrl.closeComponent()">Close</md-button>
+    </md-card-actions>
+
+</md-card>
