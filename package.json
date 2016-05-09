@@ -1,0 +1,27 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "Book gallery",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot"
+  },
+  "author": "Nikolay Popov",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-material": "^1.0.8",
+    "angular-resource": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "babel-loader": "^5.4.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "ng-cache-loader": "0.0.15",
+    "node-sass": "^3.7.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.0"
+  }
+}
