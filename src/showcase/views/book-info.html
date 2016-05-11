@@ -2,7 +2,7 @@
 
     <md-card-title>
         <md-card-title-text>
-            <span class="md-headline">{{$ctrl.book.title.default}}</span>
+            <span class="md-headline">{{::$ctrl.book.title.default}}</span>
         </md-card-title-text>
     </md-card-title>
 
@@ -12,8 +12,8 @@
         <md-list>
             <md-list-item class="md-2-line" ng-repeat="(key, value) in $ctrl.book">
                 <div class="md-list-item-text" layout="column">
-                    <h3>{{ key }}</h3>
-                    <p>{{ value }}</p>
+                    <h3>{{ ::key }}</h3>
+                    <p>{{ ::value }}</p>
                 </div>
             </md-list-item>
         </md-list>
