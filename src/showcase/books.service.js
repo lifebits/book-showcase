@@ -1,6 +1,6 @@
 class BookService {
 
-    constructor($resource) {
+    constructor($resource, $state) {
 
         this.url = "https://ds.aggregion.com/api/public/catalog/:id";
         this.booksAPI = $resource(this.url);
@@ -15,7 +15,10 @@ class BookService {
         this.getBookFromServer = (bookId) => {
             return this.booksAPI.get({id: bookId}).$promise.then(
                 response => response,
-                error => console.log("BookService: Book " + error.statusText + " " + error.status)
+                error => {
+                    console.log("BookService: Book " + error.statusText + " " + error.status);
+                    $state.go('404');
+                }
             );
         };
 
@@ -39,6 +42,6 @@ class BookService {
 
 }
 
-BookService.$inject = ['$resource'];
+BookService.$inject = ['$resource', '$state'];
 
 export default BookService
