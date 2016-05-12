@@ -1,12 +1,7 @@
-# Book Showcase
-
-Для установки проекта понадобится:
+# Installation and Running
 
     - git.clone
     - npm.install
+    - webpack-dev-server
     
-В UI-router поставлена заглушка на html5Mode, в index.html добавлен base href, для урлов без хэша (#). Но без настроенного сервера, который будет обрабатывать пути от # в url не избавиться, работать конечно будет, но, мягко говоря, с изюминкой.
-
-Все отсальное сделано в соотвествии с заданием.
-
 [live example](http://lifebits.ru/a/book/)
