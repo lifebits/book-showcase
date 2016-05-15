@@ -1,16 +1,15 @@
 routing.$inject = ['$stateProvider'];
 
 export default function routing($stateProvider) {
+
     $stateProvider
         .state('showcase', {
             url: '/showcase',
             resolve: {
-                goods: ['BooksService',
+                goodsInit: ['BooksService',
                     function(BooksService) {
                         return BooksService.getBooksFromServer().then (
-                            result => {
-                                BooksService.books = result
-                            }
+                            result => BooksService.books = result
                         );
                     }]
             },
@@ -19,19 +18,21 @@ export default function routing($stateProvider) {
         .state('showcase.book', {
             url: '/:bookId',
             resolve: {
-                goods: ['BooksService', '$stateParams',
+                goodsInit: ['BooksService', '$stateParams',
                     function(BooksService, $stateParams) {
-                        return BooksService.getBookFromServer($stateParams.bookId).then (
-                            result => {
-                                BooksService.book = result
-                            }
-                        );
+                        let bookId = $stateParams.bookId;
+                        return BooksService.getBookFromServer(bookId).then (
+                            result => BooksService.book = result
+                        ).then(
+                            () => BooksService.getBundlesBookFromServer(bookId)
+                        ).then(
+                            bundles => BooksService.bundles = bundles
+                        ).catch(error => {
+                            console.log(error);
+                        });
                     }]
             },
             template: '<book-info/>'
         });
-
-
-
 
 }

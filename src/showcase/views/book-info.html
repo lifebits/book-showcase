@@ -1,5 +1,15 @@
 <md-card>
 
+    <md-card-actions layout="row" layout-align="end center">
+        <button ng-click="$ctrl.closeComponent()" class="md-warn md-button md-ink-ripple" type="button" aria-label="Warn">
+            <span class="ng-binding ng-scope">Close</span>
+            <div class="md-ripple-container"></div>
+        </button>
+    </md-card-actions>
+
+
+    <md-divider></md-divider>
+
     <md-card-title>
         <md-card-title-text>
             <span class="md-headline">{{::$ctrl.book.title.default}}</span>
@@ -19,8 +29,25 @@
         </md-list>
     </md-card-content>
 
-    <md-card-actions layout="row" layout-align="end center">
-        <md-button ng-click="$ctrl.closeComponent()">Close</md-button>
-    </md-card-actions>
+    <md-divider></md-divider>
+
+    <div class="bundleList">
+
+        <section layout="row" layout-sm="column" layout-wrap="" class="layout-wrap layout-sm-column layout-row">
+            <button ng-repeat="bundle in $ctrl.bundles"
+                    class="md-fab md-primary md-button md-ink-ripple" type="button" aria-label="Use Android">
+                <md-icon aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false" >
+                        <g id="android">
+                            <path fill="#888888" d="M13,9V3.5L18.5,9M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z" />
+                        </g>
+                    </svg>
+                </md-icon>
+                <div class="md-ripple-container"></div>
+            </button>
+            <div class="label">Bundles List</div>
+        </section>
+
+    </div>
 
 </md-card>

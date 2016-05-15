@@ -2,6 +2,7 @@ class BookInfoController {
     constructor(BooksService, FileService, $state) {
 
         this.book = BooksService.book;
+        this.bundles = BooksService.bundles;
 
         this.getBookCoverURL = function(coverId) {
             return FileService.getImgURL(coverId);
