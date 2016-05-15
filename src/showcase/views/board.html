@@ -5,7 +5,7 @@
 
             <md-grid-tile ui-sref="showcase.book({bookId: book.id})"
                           ui-sref-active="active"
-                          ng-repeat="book in $ctrl.books" class="green">
+                          ng-repeat="book in $ctrl.books" class="green overflow">
 
                 <img ng-src="{{::$ctrl.getBookCoverURL(book.cover)}}" check-loading-img/>
                 <md-grid-tile-footer>
@@ -17,8 +17,8 @@
         </md-grid-list>
     </md-content>
 
-    <section ui-view class="wrap-bookInfo">
+</section>
 
-    </section>
+<section ui-view class="wrap-bookInfo">
 
 </section>
