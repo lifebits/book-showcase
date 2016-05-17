@@ -50,6 +50,7 @@ class BookService {
             return catalogResource.book({bookId: bookId}).$promise.then(
                 response => response,
                 error => {
+                    console.log(error);
                     $state.go('404', {error: 'Book ' + error.statusText});
                 }
             );
@@ -73,10 +74,6 @@ class BookService {
             );
         };
 
-    }
-
-    static aaa() {
-        return "aaa"
     }
 
     get books() {

@@ -13,6 +13,7 @@ export default angular.module('app.showcase', [uiRouter])
     .component('boardBooks', require('./board.component'))
     .component('bookInfo', require('./bookInfo.component'))
 
-    .service('BooksService', require('./books.service'))
+    .service('BooksResourceService', require('./books.resource.service'))
+    .service('BooksRestangularService', require('./books.restangular.service'))
 
     .name;
