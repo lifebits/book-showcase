@@ -1,8 +1,8 @@
 class BookInfoController {
-    constructor(BooksService, FileService, $state) {
+    constructor(BooksResourceService, BooksRestangularService, FileService, $state) {
 
-        this.book = BooksService.book;
-        this.bundles = BooksService.bundles;
+        this.book = BooksRestangularService.book;
+        this.bundles = BooksRestangularService.bundles;
 
         this.getBookCoverURL = function(coverId) {
             return FileService.getImgURL(coverId);
@@ -15,6 +15,6 @@ class BookInfoController {
     }
 }
 
-BookInfoController.$inject = ['BooksService', 'FileService', '$state'];
+BookInfoController.$inject = ['BooksResourceService', 'BooksRestangularService', 'FileService', '$state'];
 
 export default BookInfoController;

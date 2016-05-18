@@ -1,7 +1,7 @@
 class BoardController {
-    constructor(BooksService, FileService) {
+    constructor(BooksResourceService, BooksRestangularService, FileService) {
 
-        this.books = BooksService.books;
+        this.books = BooksRestangularService.books;
 
         this.getBookCoverURL = function(coverId) {
             return FileService.getImgURL(coverId);
@@ -10,6 +10,6 @@ class BoardController {
     }
 }
 
-BoardController.$inject = ['BooksService', 'FileService'];
+BoardController.$inject = ['BooksResourceService', 'BooksRestangularService', 'FileService'];
 
 export default BoardController;
