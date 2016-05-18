@@ -45,7 +45,8 @@
                 </md-icon>
                 <div class="md-ripple-container"></div>
             </button>
-            <div class="label">Bundles List</div>
+            <div ng-if="$ctrl.bundles" class="label">Bundles List</div>
+            <div ng-if="!$ctrl.bundles" class="label">Bundles list not available</div>
         </section>
 
     </div>
