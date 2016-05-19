@@ -1,4 +1,4 @@
-routing.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider', '$httpProvider'];
+routing.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
 
 export default function routing($locationProvider, $stateProvider, $urlRouterProvider) {
 

@@ -4,7 +4,7 @@ export default {
     restrict: 'E',
     bindings: {},
     template: pageNotFoundTemplate,
-    controller: function($stateParams) {
+    controller: ['$stateParams', function($stateParams) {
         this.error = $stateParams.error;
-    }
+    }]
 }
